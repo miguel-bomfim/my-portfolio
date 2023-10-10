@@ -34,7 +34,9 @@ export default function Social({ pathname }: { pathname: string }) {
       <li>
         <a
           href={
-            pathname === ('/' || '/br') ? 'curriculo-miguel' : '/cv-miguel.pdf'
+            pathname === ('/' || '/br')
+              ? '/curriculo-miguel.pdf'
+              : '/cv-miguel.pdf'
           }
           download={
             pathname === ('/' || '/br') ? 'Currículo Miguel' : 'CV Miguel'
