@@ -25,7 +25,7 @@ export default function Header({ pathname }: { pathname: string }) {
           {t('jobTitle').split(' ')[1]}
         </p>
       </div>
-      <p className="font-mono w-2/3 justify-self-end text-end text-[1.5vw] uppercase leading-none">
+      <p className="w-2/3 justify-self-end text-end font-mono text-[1.5vw] uppercase leading-none">
         {t('bye')}
       </p>
     </div>
