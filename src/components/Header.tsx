@@ -1,12 +1,11 @@
 import React from 'react'
 
 import { useTranslations } from 'next-intl'
-import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
+import Social from '@/components/Social'
 
-export default function Header() {
-  const t = useTranslations('IndexPage')
-  const pathname = usePathname()
+export default function Header({ pathname }: { pathname: string }) {
+  const t = useTranslations('HeaderComponent')
 
   return (
     <div
@@ -14,16 +13,19 @@ export default function Header() {
         'grid-cols-0': pathname === '/',
       })}
     >
-      <p className="font-sans text-[1.5vw] uppercase leading-none">{t('hi')}</p>
+      <p className="font-mono text-[1.5vw] uppercase leading-none">{t('hi')}</p>
       <div className="flex flex-col justify-self-center">
-        <p className="text-[7vw] font-bold uppercase leading-none">
-          {t('jobTitle').split(' ')[0]}
-        </p>
+        <div className="flex items-center justify-between">
+          <p className="grow text-[7vw] font-bold uppercase leading-none">
+            {t('jobTitle').split(' ')[0]}
+          </p>
+          <Social pathname={pathname} />
+        </div>
         <p className="text-[10vw] font-bold uppercase leading-none">
           {t('jobTitle').split(' ')[1]}
         </p>
       </div>
-      <p className="w-2/3 justify-self-end text-end font-sans text-[1.5vw] uppercase leading-none">
+      <p className="font-mono w-2/3 justify-self-end text-end text-[1.5vw] uppercase leading-none">
         {t('bye')}
       </p>
     </div>

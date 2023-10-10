@@ -1,11 +1,11 @@
 {
-  "IndexPage": {
-    "hi": "Olá, eu sou o Miguel 👋",
-    "jobTitle": "Dev Frontend",
-    "bye": "Tenho 24 anos de idade, sou Desenvolvedor com três anos de experiência"
-  },
   "LocaleMetadata": {
     "title": "Olá 👋",
     "description": "Portfólio do Miguel"
-  }
+  },
+  "HeaderComponent": {
+    "hi": "Olá, eu sou o Miguel 👋",
+    "jobTitle": "Dev Frontend",
+    "bye": "Tenho 24 anos de idade, sou Desenvolvedor com três anos de experiência"
+  }  
 }

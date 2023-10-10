@@ -1,13 +1,18 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
 import Header from '@/components/Header'
+import IntlButtons from '@/components/IntlButtons'
+import { usePathname } from 'next/navigation'
 
 export default function Index() {
-  const t = useTranslations('IndexPage')
+  const pathname = usePathname()
+
   return (
-    <div className="flex justify-center">
-      <Header />
-    </div>
+    <>
+      <IntlButtons pathname={pathname} />
+      <div className="flex justify-center">
+        <Header pathname={pathname} />
+      </div>
+    </>
   )
 }

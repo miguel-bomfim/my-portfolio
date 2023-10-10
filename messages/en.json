@@ -1,11 +1,11 @@
 {
-  "IndexPage": {
-    "hi": "Hello, it's me Miguel 👋",
-    "jobTitle": "Frontend Developer",
-    "bye": "I'm 24 years old, I'm a Developer with three years of experience"
-  },
   "LocaleMetadata": {
     "title": "Hello 👋",
     "description": "Miguel's portfolio"
+  },
+  "HeaderComponent": {
+    "hi": "Hello, it's me Miguel 👋",
+    "jobTitle": "Frontend Developer",
+    "bye": "I'm 24 years old, I'm a Developer with three years of experience"
   }
 }

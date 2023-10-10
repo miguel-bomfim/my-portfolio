@@ -8,9 +8,9 @@ type Props = {
   params: { locale: string }
 }
 
-const roboto = Aboreto({
+const aboreto = Aboreto({
   subsets: ['latin'],
-  variable: '--font-roboto',
+  variable: '--font-aboreto',
   weight: '400',
 })
 
@@ -55,7 +55,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${roboto.variable}`}>
+      <body className={`${aboreto.variable}`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

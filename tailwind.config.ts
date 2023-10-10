@@ -14,7 +14,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        sans: ['var(--font-roboto)'],
+        mono: ['var(--font-aboreto)'],
       },
       gridTemplateColumns: {
         '0': 'repeat(1, minmax(0, 0.95fr))',
