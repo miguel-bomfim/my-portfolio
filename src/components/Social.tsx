@@ -1,21 +1,19 @@
-import { FileText, Github, Linkedin } from 'lucide-react'
+import { FaLinkedin as LinkedIn, FaGithub as GitHub } from 'react-icons/fa'
+import { SiGoogledocs as Doc } from 'react-icons/si'
+
 import React from 'react'
 
 export default function Social({ pathname }: { pathname: string }) {
+  // fill-[#0a66c2]
   return (
-    <ul className="flex grow justify-evenly">
+    <ul className="flex grow gap-2">
       <li>
         <a
           target="_blank"
           href="https://linkedin.com/in/miguel-bomfim"
           rel="noreferrer"
         >
-          <Linkedin
-            className="delay-50 rounded-lg border-2 bg-[#0a66c2] fill-white p-2 transition hover:scale-105"
-            color="#0a66c2"
-            size={'5vw'}
-            absoluteStrokeWidth
-          />
+          <LinkedIn className=" fill-[#a4c2e0] text-[3.5vw] transition delay-75 ease-linear hover:scale-110 hover:fill-[#0a66c2]" />
         </a>
       </li>
       <li>
@@ -24,11 +22,7 @@ export default function Social({ pathname }: { pathname: string }) {
           href="https://github.com/miguel-bomfim"
           rel="noreferrer"
         >
-          <Github
-            className="delay-50 rounded-lg border-2 bg-gray-100 fill-black p-2 transition hover:scale-105"
-            size={'5vw'}
-            absoluteStrokeWidth
-          />
+          <GitHub className="h-auto fill-gray-200 text-[3.5vw] transition delay-75 ease-linear hover:scale-110 hover:fill-gray-800 " />
         </a>
       </li>
       <li>
@@ -42,11 +36,7 @@ export default function Social({ pathname }: { pathname: string }) {
             pathname === ('/' || '/br') ? 'Currículo Miguel' : 'CV Miguel'
           }
         >
-          <FileText
-            className="delay-50 rounded-lg border-2 bg-black fill-white p-2 transition hover:scale-105"
-            size={'5vw'}
-            absoluteStrokeWidth
-          />
+          <Doc className="delay-50 fill-gray-300 text-[3.5vw] transition ease-linear hover:scale-110 hover:fill-black" />
         </a>
       </li>
     </ul>
