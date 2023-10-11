@@ -4,16 +4,15 @@ import { SiGoogledocs as Doc } from 'react-icons/si'
 import React from 'react'
 
 export default function Social({ pathname }: { pathname: string }) {
-  // fill-[#0a66c2]
   return (
-    <ul className="flex grow gap-2">
+    <ul className="mt-8 flex grow gap-2 md:mt-0">
       <li>
         <a
           target="_blank"
           href="https://linkedin.com/in/miguel-bomfim"
           rel="noreferrer"
         >
-          <LinkedIn className=" fill-[#a4c2e0] text-[3.5vw] transition delay-75 ease-linear hover:scale-110 hover:fill-[#0a66c2]" />
+          <LinkedIn className=" fill-[#0a66c2] text-5xl transition delay-75 ease-linear hover:scale-110 md:fill-[#a4c2e0] md:text-[3.5vw] md:hover:fill-[#0a66c2]" />
         </a>
       </li>
       <li>
@@ -22,7 +21,7 @@ export default function Social({ pathname }: { pathname: string }) {
           href="https://github.com/miguel-bomfim"
           rel="noreferrer"
         >
-          <GitHub className="h-auto fill-gray-200 text-[3.5vw] transition delay-75 ease-linear hover:scale-110 hover:fill-gray-800 " />
+          <GitHub className=":hover:fill-gray-800 h-auto fill-gray-800 text-5xl transition delay-75 ease-linear hover:scale-110 md:fill-gray-200 md:text-[3.5vw] " />
         </a>
       </li>
       <li>
@@ -36,7 +35,7 @@ export default function Social({ pathname }: { pathname: string }) {
             pathname === ('/' || '/br') ? 'Currículo Miguel' : 'CV Miguel'
           }
         >
-          <Doc className="delay-50 fill-gray-300 text-[3.5vw] transition ease-linear hover:scale-110 hover:fill-black" />
+          <Doc className="delay-50 fill-black text-5xl transition ease-linear hover:scale-110 md:fill-gray-300 md:text-[3.5vw] md:hover:fill-black" />
         </a>
       </li>
     </ul>
