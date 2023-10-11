@@ -3,41 +3,51 @@ import React from 'react'
 import { useTranslations } from 'next-intl'
 import clsx from 'clsx'
 import Social from '@/components/Social'
+import useIsMobile from '@/hooks/useIsMobile'
 
 export default function Header({ pathname }: { pathname: string }) {
   const t = useTranslations('HeaderComponent')
+  const isMobile = useIsMobile()
 
   return (
     <div
-      className={clsx('grid h-screen content-center justify-center p-8', {
-        'grid-cols-0': pathname === ('/' || '/br'),
-      })}
+      className={clsx(
+        'flex h-screen flex-col content-center items-center justify-center p-8 md:grid',
+        {
+          'grid-cols-0': pathname === ('/' || '/br'),
+        },
+      )}
     >
-      <p className="font-mono text-[1.5vw] uppercase leading-none antialiased">
+      <p className="font-mono text-2xl uppercase leading-none antialiased md:text-[1.5vw]">
         {t('hi')}
       </p>
-      <div className="flex flex-col justify-self-center">
+      <div className="flex gap-1 justify-self-center md:flex-col md:gap-0">
         <div className="flex items-center justify-between">
           <p
             className={clsx(
-              'grow font-bold uppercase leading-none antialiased',
+              'grow text-2xl font-bold uppercase leading-none antialiased',
               {
-                'text-[4vw]': pathname === ('/' || '/br'),
-                'text-[7vw]': pathname === '/en',
+                'md:text-[4vw]': pathname === ('/' || '/br'),
+                'md:text-[7vw]': pathname === '/en',
               },
             )}
           >
             {t('jobTitle').split(' ')[0]}
           </p>
-          <Social pathname={pathname} />
+          {!isMobile && <Social pathname={pathname} />}
         </div>
-        <p className=" text-[10vw] font-bold uppercase leading-none antialiased">
+        <p className="text-2xl font-bold uppercase leading-none antialiased md:text-[10vw]">
           {t('jobTitle').split(' ')[1]}
         </p>
       </div>
-      <p className=" w-2/3 justify-self-end text-end font-mono text-[1.5vw] uppercase leading-none antialiased">
+      <p className="w-2/3 self-end justify-self-end text-end font-mono uppercase leading-none antialiased md:text-[1.5vw]">
         {t('bye')}
       </p>
+      {isMobile && (
+        <div>
+          <Social pathname={pathname} />
+        </div>
+      )}
     </div>
   )
 }
