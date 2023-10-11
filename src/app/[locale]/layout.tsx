@@ -28,8 +28,8 @@ export async function generateMetadata({ params: { locale } }: Props) {
   const t = createTranslator({ locale, messages })
 
   return {
-    title: t('LocaleMetadata.title'),
-    description: 'rws',
+    title: 'Miguel Bomfim',
+    description: t('LocaleMetadata.description'),
   }
 }
 
