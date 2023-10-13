@@ -18,7 +18,7 @@ export default function Header({ pathname }: { pathname: string }) {
         },
       )}
     >
-      <p className="font-mono text-2xl uppercase leading-none antialiased md:text-[1.5vw]">
+      <p className="font-mono text-2xl font-thin uppercase leading-none antialiased md:text-[1.5vw]">
         {t('hi')}
       </p>
       <div className="flex gap-1 justify-self-center md:flex-col md:gap-0">
@@ -40,7 +40,7 @@ export default function Header({ pathname }: { pathname: string }) {
           {t('jobTitle').split(' ')[1]}
         </p>
       </div>
-      <p className="w-2/3 self-end justify-self-end text-end font-mono uppercase leading-none antialiased md:text-[1.5vw]">
+      <p className="w-2/3 self-end justify-self-end text-end font-mono font-thin uppercase leading-none antialiased md:text-[1.5vw]">
         {t('bye')}
       </p>
       {isMobile && (

@@ -1,6 +1,6 @@
 import { NextIntlClientProvider, createTranslator } from 'next-intl'
 import { notFound } from 'next/navigation'
-import { Aboreto } from 'next/font/google'
+import { Roboto_Flex as Roboto } from 'next/font/google'
 import { ReactNode } from 'react'
 
 type Props = {
@@ -8,10 +8,9 @@ type Props = {
   params: { locale: string }
 }
 
-const aboreto = Aboreto({
+const roboto = Roboto({
   subsets: ['latin'],
-  variable: '--font-aboreto',
-  weight: '400',
+  variable: '--font-roboto',
 })
 
 async function getMessages(locale: string) {
@@ -55,7 +54,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${aboreto.variable}`}>
+      <body className={`${roboto.variable}`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
