@@ -21,7 +21,7 @@ export default function Social({ pathname }: { pathname: string }) {
           href="https://github.com/miguel-bomfim"
           rel="noreferrer"
         >
-          <GitHub className=":hover:fill-gray-800 h-auto fill-gray-800 text-5xl transition delay-75 ease-linear hover:scale-110 md:fill-gray-200 md:text-[3.5vw] " />
+          <GitHub className="h-auto fill-gray-800 text-5xl transition delay-75 ease-linear hover:scale-110 hover:fill-gray-800 md:fill-gray-200 md:text-[3.5vw] " />
         </a>
       </li>
       <li>
