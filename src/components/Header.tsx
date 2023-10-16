@@ -12,35 +12,33 @@ export default function Header({ pathname }: { pathname: string }) {
   return (
     <div
       className={clsx(
-        'flex h-screen flex-col content-center items-center justify-center p-8 md:grid',
+        'flex h-[100vh] flex-col items-center justify-center p-8 md:items-baseline',
         {
           'grid-cols-0': pathname === ('/' || '/br'),
         },
       )}
     >
-      <p className="font-mono text-2xl font-thin uppercase leading-none antialiased md:text-[1.5vw]">
+      <p className="px-1 font-mono text-2xl font-thin uppercase leading-none antialiased">
         {t('hi')}
       </p>
-      <div className="flex gap-1 justify-self-center md:flex-col md:gap-0">
-        <div className="flex items-center justify-between">
-          <p
-            className={clsx(
-              'grow text-2xl font-bold uppercase leading-none antialiased',
-              {
-                'md:text-[4vw]': pathname === ('/' || '/br'),
-                'md:text-[7vw]': pathname === '/en',
-              },
-            )}
-          >
-            {t('jobTitle').split(' ')[0]}
-          </p>
-          {!isMobile && <Social pathname={pathname} />}
-        </div>
-        <p className="text-2xl font-bold uppercase leading-none antialiased md:text-[10vw]">
-          {t('jobTitle').split(' ')[1]}
+      <div className="flex items-center px-1">
+        <p
+          className={clsx(
+            'text-4xl font-bold uppercase leading-none antialiased',
+            {
+              'md:text-[5.36vw]': pathname === ('/' || '/br'),
+              'md:text-[10vw]': pathname === '/en',
+            },
+          )}
+        >
+          {t('jobTitle').split(' ')[0]}
         </p>
+        {!isMobile && <Social pathname={pathname} />}
       </div>
-      <p className="w-2/3 self-end justify-self-end text-end font-mono font-thin uppercase leading-none antialiased md:text-[1.5vw]">
+      <p className="text-4xl font-bold uppercase leading-none antialiased md:self-center md:text-[13.4vw]">
+        {t('jobTitle').split(' ')[1]}
+      </p>
+      <p className="w-2/3 justify-self-end px-1 text-center font-mono font-thin uppercase leading-none antialiased md:w-2/5 md:self-end md:text-end">
         {t('bye')}
       </p>
       {isMobile && (
