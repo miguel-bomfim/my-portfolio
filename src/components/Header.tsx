@@ -21,12 +21,12 @@ export default function Header({ pathname }: { pathname: string }) {
       <p className="px-1 font-mono text-2xl font-thin uppercase leading-none antialiased">
         {t('hi')}
       </p>
-      <div className="flex items-center px-1">
+      <div className="flex items-center px-1 md:w-full md:justify-between">
         <p
           className={clsx(
-            'text-4xl font-bold uppercase leading-none antialiased',
+            'text-4xl font-bold uppercase antialiased md:leading-[0.8]',
             {
-              'md:text-[5.36vw]': pathname === ('/' || '/br'),
+              'md:text-[6vw]': pathname === ('/' || '/br'),
               'md:text-[10vw]': pathname === '/en',
             },
           )}
@@ -35,7 +35,7 @@ export default function Header({ pathname }: { pathname: string }) {
         </p>
         {!isMobile && <Social pathname={pathname} />}
       </div>
-      <p className="text-4xl font-bold uppercase leading-none antialiased md:self-center md:text-[13.4vw]">
+      <p className="text-4xl font-bold uppercase antialiased md:self-center md:text-[13.4vw] md:leading-[0.9]">
         {t('jobTitle').split(' ')[1]}
       </p>
       <p className="w-2/3 justify-self-end px-1 text-center font-mono font-thin uppercase leading-none antialiased md:w-2/5 md:self-end md:text-end">
