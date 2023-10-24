@@ -12,7 +12,7 @@ export default function Header({ pathname }: { pathname: string }) {
   return (
     <div
       className={clsx(
-        'flex h-[100vh] flex-col items-center justify-center p-8 md:items-baseline',
+        'flex h-[100vh] flex-col items-center justify-center p-8 md:items-baseline md:p-20',
         {
           'grid-cols-0': pathname === ('/' || '/br'),
         },
