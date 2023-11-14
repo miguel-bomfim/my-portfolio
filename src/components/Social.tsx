@@ -12,7 +12,7 @@ export default function Social({ pathname }: { pathname: string }) {
           href="https://linkedin.com/in/miguel-bomfim"
           rel="noreferrer"
         >
-          <LinkedIn className=" fill-[#0a66c2] text-5xl transition delay-75 ease-linear hover:scale-110 md:fill-[#a4c2e0] md:text-[3.5vw] md:hover:fill-[#0a66c2]" />
+          <LinkedIn className=" delay-25 fill-[#0a66c2] text-5xl transition ease-linear hover:scale-110 md:fill-[#a4c2e0] md:text-[3.5vw] md:hover:fill-[#0a66c2]" />
         </a>
       </li>
       <li>
@@ -21,7 +21,7 @@ export default function Social({ pathname }: { pathname: string }) {
           href="https://github.com/miguel-bomfim"
           rel="noreferrer"
         >
-          <GitHub className="h-auto fill-gray-800 text-5xl transition delay-75 ease-linear hover:scale-110 hover:fill-gray-800 md:fill-gray-200 md:text-[3.5vw] " />
+          <GitHub className="delay-25 h-auto fill-gray-800 text-5xl transition ease-linear hover:scale-110 hover:fill-gray-800 md:fill-gray-200 md:text-[3.5vw] " />
         </a>
       </li>
       <li>
@@ -35,7 +35,7 @@ export default function Social({ pathname }: { pathname: string }) {
             pathname === ('/' || '/br') ? 'Currículo Miguel' : 'CV Miguel'
           }
         >
-          <Doc className="delay-50 fill-black text-5xl transition ease-linear hover:scale-110 md:fill-gray-300 md:text-[3.5vw] md:hover:fill-black" />
+          <Doc className="delay-25 fill-black text-5xl transition ease-linear hover:scale-110 md:fill-gray-300 md:text-[3.5vw] md:hover:fill-black" />
         </a>
       </li>
     </ul>
