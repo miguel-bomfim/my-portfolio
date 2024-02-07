@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Social({ pathname }: { pathname: string }) {
   return (
-    <ul className="mt-8 flex gap-2 md:mt-0 md:pr-8">
+    <ul className="z-20 mt-8 flex gap-2 md:mt-0 md:pr-8">
       <li>
         <a
           target="_blank"
