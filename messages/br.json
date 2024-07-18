@@ -3,8 +3,7 @@
     "description": "Portfólio do Miguel"
   },
   "HeaderComponent": {
-    "hi": "Olá, eu sou o Miguel 👋",
-    "jobTitle": "Desenvolvedor Frontend",
-    "bye": "Tenho 24 anos de idade e trabalho com Desenvolvimento de Software há pouco mais de 3 anos."
+    "introText": "Ola, eu sou o Miguel!",
+    "description": "Analista de Sistema que ama resolver problemas"
   }  
 }
