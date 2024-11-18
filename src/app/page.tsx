@@ -1,28 +1,28 @@
-import Link from "next/link";
-import Image from "next/image";
-import "./globals.css";
-import { LuGithub, LuInstagram } from "react-icons/lu";
-import { FaLinkedinIn } from "react-icons/fa";
+import Link from 'next/link'
+import Image from 'next/image'
+import './globals.css'
+import { LuGithub, LuInstagram } from 'react-icons/lu'
+import { FaLinkedinIn } from 'react-icons/fa'
 
 export default function Home() {
   const mockPortfolioItems = [
     {
-      title: "Coming soon",
+      title: 'Coming soon',
       img: {
-        url: "",
+        url: '',
         // url: 'https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
-      link: "https://",
+      link: '#',
     },
     {
-      title: "Coming soon",
+      title: 'Coming soon',
       img: {
-        url: "",
+        url: '',
         // url: 'https://images.unsplash.com/photo-1717376280564-0fd179a9695a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
-      link: "https://",
+      link: '#',
     },
-  ];
+  ]
 
   return (
     <main className="flex flex-col items-center p-10 text-slate-100">
@@ -84,5 +84,5 @@ export default function Home() {
         </ul>
       </div>
     </main>
-  );
+  )
 }
