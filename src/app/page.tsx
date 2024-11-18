@@ -1,40 +1,32 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { InstagramSvg } from '@/components/Instagram'
-import { Linkedin } from '@/components/Linkedin'
-import { GitHubSvg } from '@/components/GitHub'
-import eu from '../assets/eu.png'
-import './globals.css'
-import { motion } from 'framer-motion'
+import Link from "next/link";
+import Image from "next/image";
+import "./globals.css";
+import { LuGithub, LuInstagram } from "react-icons/lu";
+import { FaLinkedinIn } from "react-icons/fa";
 
 export default function Home() {
   const mockPortfolioItems = [
     {
-      title: 'Fotografia',
+      title: "Coming soon",
       img: {
-        url: '',
+        url: "",
         // url: 'https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
-      link: 'https://',
+      link: "https://",
     },
     {
-      title: 'Quiz',
+      title: "Coming soon",
       img: {
-        url: '',
+        url: "",
         // url: 'https://images.unsplash.com/photo-1717376280564-0fd179a9695a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
-      link: 'https://',
+      link: "https://",
     },
-  ]
+  ];
 
   return (
     <main className="flex flex-col items-center p-10 text-slate-100">
-      <header className="flex h-screen flex-col items-center justify-center px-4">
-        {/* <Image
-          src={eu}
-          className=" mb-8 h-32 w-32 rounded-full border-2 border-teal-400 object-cover"
-          alt="eu"
-        /> */}
+      <header className="flex h-[90vh] flex-col items-center justify-center px-4 text-center">
         <h1 className="mb-4 text-6xl font-bold text-[#262626] md:text-8xl">
           Miguel Bomfim
         </h1>
@@ -45,16 +37,28 @@ export default function Home() {
         </h2>
 
         <div className="flex items-center gap-2 p-4">
-          <Link href="#" className="">
-            <GitHubSvg />
+          <Link
+            href="https://github.com/miguel-bomfim"
+            target="_blank"
+            className="rounded-md border border-black p-2 hover:bg-primaryColor-100/20"
+          >
+            <LuGithub size={24} color="black" />
           </Link>
 
-          <Link href="#" className="">
-            <Linkedin />
+          <Link
+            href="https://www.linkedin.com/in/miguel-bomfim/"
+            target="_blank"
+            className="rounded-md border border-black p-2 hover:bg-primaryColor-100/20"
+          >
+            <FaLinkedinIn size={24} color="black" />
           </Link>
 
-          <Link href="#" className="">
-            <InstagramSvg />
+          <Link
+            href="https://www.instagram.com/miguellbomfim/"
+            target="_blank"
+            className="rounded-md border border-black p-2 hover:bg-primaryColor-100/20"
+          >
+            <LuInstagram size={24} color="black" />
           </Link>
         </div>
       </header>
@@ -80,5 +84,5 @@ export default function Home() {
         </ul>
       </div>
     </main>
-  )
+  );
 }
