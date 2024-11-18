@@ -19,6 +19,18 @@ const config: Config = {
       gridTemplateColumns: {
         '0': 'repeat(1, minmax(0, 0.95fr))',
       },
+      colors: {
+        darkColor: '#262626',
+        lightColor: '#FAF9F6',
+        primaryColor: {
+          100: '#5581D9',
+          200: '#5E88BF',
+        },
+        secondaryColor: {
+          100: '#F2E205',
+          200: '#D7F205',
+        },
+      },
     },
   },
   plugins: [],

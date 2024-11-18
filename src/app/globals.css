@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* background: #262626; */
+  background: #ffffff;
+}
+
+.map-container {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
