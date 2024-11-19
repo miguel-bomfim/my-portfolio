@@ -1,0 +1,63 @@
+.carousel {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  background-color: #41abcc;
+}
+
+/* ... */
+.carousel > * {
+  flex: 0 0 100%;
+}
+
+.carousel:hover .group {
+  animation-play-state: paused;
+}
+
+.icon {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  color: white;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.group {
+  display: flex;
+  will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+  animation: scrolling 20s linear infinite;
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  top: 25px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
