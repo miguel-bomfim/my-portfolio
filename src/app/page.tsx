@@ -46,8 +46,7 @@ export default function Home() {
   }, [])
 
   if (!mounted) return null
-
-    return (
+  return (
     <main>
       {init && (
         <Particles
