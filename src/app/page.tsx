@@ -47,8 +47,8 @@ export default function Home() {
 
   if (!mounted) return null
 
-  return (
-    <div>
+    return (
+    <main>
       {init && (
         <Particles
           id="tsparticles"
@@ -56,8 +56,8 @@ export default function Home() {
           className="absolute inset-0"
         />
       )}
-      <main className="relative z-10 flex flex-col items-center p-10 text-slate-100">
-        <header className="flex h-[80vh] flex-col items-center justify-center px-4 text-center">
+      <section className="relative z-10 flex h-screen items-center justify-center text-slate-100">
+        <header className="flex flex-col items-center px-4 text-center">
           <h1 className="mb-4 text-6xl font-bold text-[#262626] md:text-8xl">
             Miguel Bomfim
           </h1>
@@ -95,22 +95,24 @@ export default function Home() {
         </header>
 
         <Carousel />
+      </section>
 
-        <div className="py-10 text-center">
-          <h2 className="my-3 text-black">Projects</h2>
+      <section className="relative z-10 bg-white">
+        <div className="flex flex-col items-center py-8 text-center">
+          <h3 className="my-3 text-2xl text-black">Projects</h3>
 
-          <ul className="grid gap-3 md:grid-cols-2">
+          <ul className="grid gap-3 px-4 md:grid-cols-2">
             {mockPortfolioItems.map((portfolioItem, idx) => (
-              <li key={idx} className="w-96">
+              <li key={idx} className="w-80 md:w-96">
                 <Link href={portfolioItem.link} className="flex flex-col">
                   <Image
                     src={eumeme}
                     width={100}
                     height={100}
                     alt=""
-                    className="h-48 w-full rounded-t border-x border-t border-teal-100 bg-[#202020] object-cover px-3 pt-3"
+                    className="h-48 w-full rounded-t border-x border-t border-teal-100 bg-[#202020] object-cover"
                   />
-                  <span className="w-full bg-black p-3">
+                  <span className="w-full bg-black p-3 text-white">
                     {portfolioItem.title}
                   </span>
                 </Link>
@@ -118,7 +120,7 @@ export default function Home() {
             ))}
           </ul>
         </div>
-      </main>
-    </div>
-  )
+      </section>
+    </main>
+  );
 }
