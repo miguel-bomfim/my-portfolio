@@ -16,7 +16,7 @@
 
 .icon {
   width: 100%;
-  min-height: 150px;
+  min-height: 100px;
   display: flex;
   color: white;
   padding: 20px;
@@ -27,22 +27,21 @@
 .group {
   display: flex;
   will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
-  animation: scrolling 20s linear infinite;
+  animation: scrolling 25s linear infinite;
 }
 
 .tooltip {
   position: relative;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  padding: 0 8px;
   background-color: black;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  top: 25px;
+  top: 5px;
 
   /* Position the tooltip */
   position: absolute;
