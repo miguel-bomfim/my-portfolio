@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  /* background: #262626; */
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 .map-container {
