@@ -60,7 +60,7 @@ export default async function Home() {
 
           <ul className="grid gap-3 px-4 md:grid-cols-2">
             {projects?.map((project, idx) => (
-              <li key={idx} className="w-72 md:w-80">
+              <li key={idx} className="w-80 md:w-80">
                 <Link
                   target="_blank"
                   href={project.projectLink}
