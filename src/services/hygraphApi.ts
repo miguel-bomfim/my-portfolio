@@ -31,8 +31,8 @@ export const fetchProjects = async () => {
           }
         }`,
     }),
-  });
-  const projects = await response.json();
-  const portfolioProjects: ProjectsType[] = projects.data.portfolioProjects;
-  return portfolioProjects;
-};
+  })
+  const projects = await response.json()
+  const portfolioProjects: ProjectsType[] = projects.data.portfolioProjects
+  return portfolioProjects
+}
