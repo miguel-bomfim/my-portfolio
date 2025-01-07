@@ -1,60 +1,18 @@
-'use client'
+import Link from "next/link";
+import Image from "next/image";
+import "./globals.css";
+import { LuGithub, LuInstagram } from "react-icons/lu";
+import { FaLinkedinIn } from "react-icons/fa";
+import Carousel from "@/components/Carousel";
+import ParticlesBackground from "@/components/ParticlesBackground";
+import { fetchProjects } from "@/services/hygraphApi";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import './globals.css'
-import { LuGithub, LuInstagram } from 'react-icons/lu'
-import { FaLinkedinIn } from 'react-icons/fa'
-import Particles, { initParticlesEngine } from '@tsparticles/react'
-import { loadSlim } from '@tsparticles/slim'
-import useParticleOptions from '@/hooks/useParticleOptions'
-import Carousel from '@/components/Carousel'
+export default async function Home() {
+  const projects = await fetchProjects();
 
-import eumeme from '@/assets/eumeme.gif'
-
-export default function Home() {
-  const particleOptions = useParticleOptions()
-
-  const mockPortfolioItems = [
-    {
-      title: 'Coming soon',
-      img: {
-        url: '/',
-      },
-      link: '#',
-    },
-    {
-      title: 'Coming soon',
-      img: {
-        url: '/',
-      },
-      link: '#',
-    },
-  ]
-
-  const [mounted, setMounted] = useState(false)
-  const [init, setInit] = useState(false)
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine)
-    }).then(() => {
-      setInit(true)
-    })
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
   return (
     <main>
-      {init && (
-        <Particles
-          id="tsparticles"
-          options={particleOptions}
-          className="absolute inset-0"
-        />
-      )}
+      <ParticlesBackground />
       <section className="relative z-10 flex h-screen items-center justify-center text-slate-100">
         <header className="flex flex-col items-center px-4 text-center">
           <h1 className="mb-4 text-6xl font-bold text-[#262626] md:text-8xl">
@@ -96,23 +54,27 @@ export default function Home() {
         <Carousel />
       </section>
 
-      <section className="relative z-10 bg-white">
+      <section className="relative z-10 bg-white px-6">
         <div className="flex flex-col items-center py-8 text-center">
           <h3 className="my-3 text-2xl text-black">Projects</h3>
 
           <ul className="grid gap-3 px-4 md:grid-cols-2">
-            {mockPortfolioItems.map((portfolioItem, idx) => (
-              <li key={idx} className="w-80 md:w-96">
-                <Link href={portfolioItem.link} className="flex flex-col">
+            {projects?.map((project, idx) => (
+              <li key={idx} className="w-72 md:w-80">
+                <Link
+                  target="_blank"
+                  href={project.projectLink}
+                  className="flex flex-col"
+                >
                   <Image
-                    src={eumeme}
-                    width={100}
-                    height={100}
+                    src={project.projectPics[0].url}
+                    width={project.projectPics[0].width}
+                    height={project.projectPics[0].height}
                     alt=""
-                    className="h-48 w-full rounded-t border-x border-t border-teal-100 bg-[#202020] object-cover"
+                    className="h-48 w-full rounded-t border-x border-t border-black bg-[#202020] object-cover"
                   />
                   <span className="w-full bg-black p-3 text-white">
-                    {portfolioItem.title}
+                    {project.projectTitle}
                   </span>
                 </Link>
               </li>
@@ -121,5 +83,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-  )
+  );
 }
