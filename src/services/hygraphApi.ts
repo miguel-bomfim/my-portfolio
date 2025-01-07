@@ -1,22 +1,22 @@
 type ProjectsType = {
-  projectLink: string;
-  projectTitle: string;
+  projectLink: string
+  projectTitle: string
   projectPics: [
     {
-      url: string;
-      width: number;
-      height: number;
+      url: string
+      width: number
+      height: number
     },
-  ];
-};
+  ]
+}
 
 export const fetchProjects = async () => {
-  const HYGRAPH_ENDPOINT = process.env.HYGRAPH_API || "";
+  const HYGRAPH_ENDPOINT = process.env.HYGRAPH_API || ''
 
   const response = await fetch(HYGRAPH_ENDPOINT, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       query: `query ProjectsQuery {
