@@ -1,14 +1,14 @@
-import Link from "next/link";
-import Image from "next/image";
-import "./globals.css";
-import { LuGithub, LuInstagram } from "react-icons/lu";
-import { FaLinkedinIn } from "react-icons/fa";
-import Carousel from "@/components/Carousel";
-import ParticlesBackground from "@/components/ParticlesBackground";
-import { fetchProjects } from "@/services/hygraphApi";
+import Link from 'next/link'
+import Image from 'next/image'
+import './globals.css'
+import { LuGithub, LuInstagram } from 'react-icons/lu'
+import { FaLinkedinIn } from 'react-icons/fa'
+import Carousel from '@/components/Carousel'
+import ParticlesBackground from '@/components/ParticlesBackground'
+import { fetchProjects } from '@/services/hygraphApi'
 
 export default async function Home() {
-  const projects = await fetchProjects();
+  const projects = await fetchProjects()
 
   return (
     <main>
