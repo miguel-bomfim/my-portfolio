@@ -12,27 +12,27 @@ const Carousel: React.FC = () => {
   const techs = [
     {
       name: 'React',
-      icon: <FaReact key={1} size={isMobile ? 36 : 48} color='white' />,
+      icon: <FaReact key={1} size={isMobile ? 36 : 48} color="white" />,
     },
     {
       name: 'NodeJs',
-      icon: <FaNodeJs key={2} size={isMobile ? 36 : 48} color='white' />,
+      icon: <FaNodeJs key={2} size={isMobile ? 36 : 48} color="white" />,
     },
     {
       name: 'Tailwindcss',
-      icon: <SiTailwindcss key={3} size={isMobile ? 36 : 48} color='white' />,
+      icon: <SiTailwindcss key={3} size={isMobile ? 36 : 48} color="white" />,
     },
     {
       name: 'Git',
-      icon: <FaGit key={3} size={isMobile ? 36 : 48} color='white' />,
+      icon: <FaGit key={3} size={isMobile ? 36 : 48} color="white" />,
     },
     {
       name: 'Docker',
-      icon: <FaDocker key={3} size={isMobile ? 36 : 48} color='white' />,
+      icon: <FaDocker key={3} size={isMobile ? 36 : 48} color="white" />,
     },
     {
       name: 'Prisma',
-      icon: <SiPrisma key={3} size={isMobile ? 36 : 48} color='white' />,
+      icon: <SiPrisma key={3} size={isMobile ? 36 : 48} color="white" />,
     },
   ]
   return (
@@ -54,7 +54,7 @@ const Carousel: React.FC = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Carousel;
+export default Carousel
