@@ -18,9 +18,9 @@ export default async function Home() {
           <h1 className="mb-4 text-6xl font-bold text-[#262626] md:text-8xl">
             Miguel Bomfim
           </h1>
-          <h2 className="mb-8 text-3xl md:text-5xl">
+          <h2 className="mb-8 text-3xl md:text-5xl px-4">
             <span className="bg-gradient-to-r from-primaryColor-100 to-teal-400 bg-clip-text font-semibold text-transparent">
-              Systems analyst and developer
+              Analista e Desenvolvedor de Sistemas
             </span>
           </h2>
 
@@ -54,17 +54,17 @@ export default async function Home() {
         <Carousel />
       </section>
 
-      <section className="relative z-10 bg-white px-6">
+      <section className="relative z-10 bg-white px-6 mb-16">
         <div className="flex flex-col items-center py-8 text-center">
-          <h3 className="my-3 text-2xl text-black">Projects</h3>
+          <h3 className="mt-3 mb-6 text-2xl text-black underline">Projetos</h3>
 
-          <ul className="grid gap-3 px-4 md:grid-cols-2">
+          <ul className="grid gap-4 px-4 md:grid-cols-2 lg:grid-cols-3">
             {projects?.map((project, idx) => (
               <li key={idx} className="w-80 md:w-80">
                 <Link
                   target="_blank"
                   href={project.projectLink}
-                  className="flex flex-col"
+                  className="flex flex-col hover:contrast-150 transition"
                 >
                   <Image
                     src={project.projectPics[0].url}
@@ -73,7 +73,7 @@ export default async function Home() {
                     alt=""
                     className="h-48 w-full rounded-t border-x border-t border-black bg-[#202020] object-cover"
                   />
-                  <span className="w-full bg-black p-3 text-white">
+                  <span className="w-[103%] self-center bg-black p-3 text-white rounded border-x">
                     {project.projectTitle}
                   </span>
                 </Link>
