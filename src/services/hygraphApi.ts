@@ -15,6 +15,7 @@ export const fetchProjects = async () => {
 
   const response = await fetch(HYGRAPH_ENDPOINT, {
     method: 'POST',
+    next: { revalidate: 60 },
     headers: {
       'Content-Type': 'application/json',
     },
@@ -30,7 +31,6 @@ export const fetchProjects = async () => {
             }
           }
         }`,
-      next: { revalidate: 60 },
     }),
   })
   const projects = await response.json()
