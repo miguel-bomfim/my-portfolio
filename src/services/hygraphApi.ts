@@ -30,6 +30,7 @@ export const fetchProjects = async () => {
             }
           }
         }`,
+      next: { revalidate: 60 },
     }),
   })
   const projects = await response.json()
