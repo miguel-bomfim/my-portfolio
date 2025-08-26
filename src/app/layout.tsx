@@ -13,8 +13,9 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-9534755771299362" />
         
         <Script
-          strategy="afterInteractive"
+          id="adsense-script"
           async
+          strategy="beforeInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9534755771299362"
           crossOrigin="anonymous"
         />
