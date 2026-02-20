@@ -21,7 +21,7 @@ export const fetchProjects = async () => {
     },
     body: JSON.stringify({
       query: `query ProjectsQuery {
-        portfolioProjects {
+        portfolioProjects(orderBy: createdAt_ASC) {
             projectLink
             projectTitle
             projectPics {
