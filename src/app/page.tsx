@@ -75,14 +75,15 @@ export default async function Home() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             <div className="space-y-4 text-base leading-relaxed text-gray-600">
               <p>
-                Olá! Sou Miguel Bomfim, analista e desenvolvedor de sistemas apaixonado
-                por criar experiências digitais de qualidade. Trabalho com desenvolvimento
-                web fullstack, focado em React, Next.js e Node.js.
+                Olá! Sou Miguel Bomfim, desenvolvedor web fullstack com mais de 4 anos de
+                experiência construindo aplicações modernas, performáticas e focadas na
+                experiência do usuário.
               </p>
               <p>
-                Tenho experiência com arquitetura de sistemas, integração de APIs,
-                conteinerização com Docker e bancos de dados relacionais e não-relacionais.
-                Gosto de escrever código limpo, bem organizado e fácil de manter.
+                Trabalho com todo o ciclo do produto — do design de interfaces ao back-end e
+                infraestrutura — usando tecnologias como React, Next.js, Node.js, Angular e
+                Docker. Tenho paixão por código limpo, boas práticas e por transformar ideias
+                em produtos digitais que realmente funcionam.
               </p>
               <div className="pt-2">
                 <Link
@@ -101,8 +102,8 @@ export default async function Home() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
-                  'React', 'Next.js', 'Node.js', 'TypeScript',
-                  'Docker', 'Prisma', 'Git', 'Tailwind CSS',
+                  'Angular', 'React', 'Next.js', 'Node.js', 'TypeScript',
+                  'Docker', 'SQL', 'Prisma', 'Git', 'Tailwind CSS',
                 ].map((tech) => (
                   <span
                     key={tech}
