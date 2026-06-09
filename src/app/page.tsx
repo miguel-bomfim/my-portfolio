@@ -85,15 +85,6 @@ export default async function Home() {
                 Docker. Tenho paixão por código limpo, boas práticas e por transformar ideias
                 em produtos digitais que realmente funcionam.
               </p>
-              <div className="pt-2">
-                <Link
-                  href="mailto:seuemail@exemplo.com"
-                  className="inline-flex items-center gap-2 rounded-lg bg-primaryColor-100 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primaryColor-200"
-                >
-                  <LuMail size={15} />
-                  Entre em contato
-                </Link>
-              </div>
             </div>
 
             <div>
