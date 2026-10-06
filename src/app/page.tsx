@@ -57,69 +57,14 @@ export default async function Home() {
         <Carousel />
       </section>
 
-      {/* Sobre mim */}
-      <section className="relative z-10 bg-white px-6 py-20">
-        <div className="mx-auto max-w-4xl">
-
-          {/* Section header */}
-          <div className="mb-12 flex flex-col items-center gap-2">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primaryColor-100">
-              Quem sou eu
-            </span>
-            <h2 className="text-3xl font-bold tracking-tight text-[#1a1a1a]">
-              Sobre mim
-            </h2>
-            <div className="h-[3px] w-10 rounded-full bg-gradient-to-r from-primaryColor-100 to-teal-400" />
-          </div>
-
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-            <div className="space-y-4 text-base leading-relaxed text-gray-600">
-              <p>
-                Olá! Sou Miguel Bomfim, desenvolvedor web fullstack com mais de 4 anos de
-                experiência construindo aplicações modernas, performáticas e focadas na
-                experiência do usuário.
-              </p>
-              <p>
-                Trabalho com todo o ciclo do produto — do design de interfaces ao back-end e
-                infraestrutura — usando tecnologias como React, Next.js, Node.js, Angular e
-                Docker. Tenho paixão por código limpo, boas práticas e por transformar ideias
-                em produtos digitais que realmente funcionam.
-              </p>
-            </div>
-
-            <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">
-                Stack principal
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  'Angular', 'React', 'Next.js', 'Node.js', 'TypeScript',
-                  'Docker', 'SQL', 'Prisma', 'Git', 'Tailwind CSS',
-                ].map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full border border-primaryColor-100 bg-blue-50 px-3 py-1 text-sm font-medium text-primaryColor-100"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Projetos */}
       <section className="relative z-10 bg-[#f9f9f9] px-6 py-20">
         <div className="mx-auto max-w-5xl">
 
           {/* Section header */}
           <div className="mb-12 flex flex-col items-center gap-2">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primaryColor-100">
-              O que construí
-            </span>
             <h2 className="text-3xl font-bold tracking-tight text-[#1a1a1a]">
-              Projetos
+              Projetos Pessoais
             </h2>
             <div className="h-[3px] w-10 rounded-full bg-gradient-to-r from-primaryColor-100 to-teal-400" />
           </div>
@@ -149,7 +94,7 @@ export default async function Home() {
                     <span className="flex items-center gap-1 text-xs font-medium text-primaryColor-100">
                       Ver projeto
                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
                       </svg>
                     </span>
                   </div>
